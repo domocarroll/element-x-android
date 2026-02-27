@@ -123,10 +123,6 @@ fun Project.setupKover() {
                         "io.element.android.libraries.designsystem.theme.components.bottomsheet.*",
                         // Konsist code to make test fails
                         "io.element.android.tests.konsist.failures",
-                        // Previews
-                        "*Preview*Kt",
-                        "*PreviewNight*Kt",
-                        "*PreviewDay*Kt",
                     )
                     annotatedBy(
                         "androidx.compose.ui.tooling.preview.Preview",
