@@ -49,7 +49,7 @@ internal fun TextAvatar(
             .clip(avatarShape)
             .background(color = colors.background)
     ) {
-        val fontSize = size.toSp() / 2
+        val fontSize = size.toSp() / 3
         val originalFont = ElementTheme.typography.fontHeadingMdBold
         val ratio = fontSize.value / originalFont.fontSize.value
         val lineHeight = originalFont.lineHeight * ratio

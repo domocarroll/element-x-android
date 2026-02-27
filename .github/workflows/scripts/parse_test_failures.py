@@ -11,15 +11,13 @@ def parse_test_failures(xml_file):
     if root.get("failures", "0") == "0":
         return
 
+    name = root.get('name', 'Test Suite')
+    print(f"## {name}")
+
+    printed_current = False
     for testcase in root.findall('.//testcase'):
-        printed_current = False
         failure = testcase.find('failure')
         if failure is not None:
-            if not printed_current:
-                current = testcase.get('classname', '')
-                print(f"## {current}")
-                printed_current = True
-
             # Get testcase attributes
             classname = testcase.get('classname', '')
             name = testcase.get('name', '')
