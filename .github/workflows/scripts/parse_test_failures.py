@@ -8,9 +8,18 @@ def parse_test_failures(xml_file):
     root = tree.getroot()
 
     # Find all testcase elements with failure children
+    if root.get("failures", "0") == "0":
+        return
+
     for testcase in root.findall('.//testcase'):
+        printed_current = False
         failure = testcase.find('failure')
         if failure is not None:
+            if not printed_current:
+                current = testcase.get('classname', '')
+                print(f"## {current}")
+                printed_current = True
+
             # Get testcase attributes
             classname = testcase.get('classname', '')
             name = testcase.get('name', '')
@@ -20,7 +29,10 @@ def parse_test_failures(xml_file):
             failure_content = failure.text if failure.text else ''
 
             # Print in the requested format
-            print(f"- {classname}.**{name}**: _{failure_message}_")
+            print(f"### {name}")
+            print("```")
+            print(failure_message)
+            print("```")
             print("<details><summary>Stacktrace</summary>")
             print(f"<pre><code>{failure_content}</code></pre>")
             print("</details>")
