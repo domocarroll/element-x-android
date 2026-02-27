@@ -29,6 +29,7 @@ import io.element.android.tests.testutils.lambda.lambdaRecorder
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.test.runTest
+import org.junit.Assert
 import org.junit.Rule
 import org.junit.Test
 
@@ -227,6 +228,11 @@ class LogoutPresenterTest {
             val successState = awaitItem()
             assertThat(successState.logoutAction).isInstanceOf(AsyncAction.Success::class.java)
         }
+    }
+
+    @Test
+    fun failTest() {
+        Assert.fail("Ooooh")
     }
 
     private suspend fun <T> ReceiveTurbine<T>.awaitFirstItem(): T {

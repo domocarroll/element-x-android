@@ -62,4 +62,14 @@ class DefaultHomeEntryPointTest {
         assertThat(result).isInstanceOf(HomeFlowNode::class.java)
         assertThat(result.plugins).contains(callback)
     }
+
+    @Test
+    fun `another failure test`() = runTest {
+        assertThat(true).isFalse()
+    }
+
+    @Test
+    fun `a crashing test`() = runTest {
+        error("boom")
+    }
 }
