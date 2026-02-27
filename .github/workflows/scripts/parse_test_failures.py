@@ -22,7 +22,7 @@ def parse_test_failures(xml_file):
             # Print in the requested format
             print(f"- {classname}.**{name}**: _{failure_message}_")
             print("<details><summary>Stacktrace</summary>")
-            print("<pre><code>{failure_content}</code></pre>")
+            print(f"<pre><code>{failure_content}</code></pre>")
             print("</details>")
             print("\n\n")
 
