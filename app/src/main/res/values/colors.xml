@@ -6,8 +6,7 @@
   ~ Please see LICENSE files in the repository root for full details.
   -->
 <resources>
-    <!-- Must be equal to DarkColorTokens.colorThemeBg -->
-    <color name="splashscreen_bg_dark">#FF101317</color>
-    <!-- Must be equal to LightColorTokens.colorThemeBg -->
-    <color name="splashscreen_bg_light">#FFFFFFFF</color>
+    <!-- Hyprsphere deep space palette -->
+    <color name="splashscreen_bg_dark">#FF0A0E1A</color>
+    <color name="splashscreen_bg_light">#FF0F1428</color>
 </resources>
