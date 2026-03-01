@@ -13,8 +13,8 @@ import io.element.android.libraries.core.meta.BuildType
 
 fun BuildMeta.isElement(): Boolean {
     return when (buildType) {
-        BuildType.RELEASE -> applicationId == "io.element.android.x"
-        BuildType.NIGHTLY -> applicationId == "io.element.android.x.nightly"
-        BuildType.DEBUG -> applicationId == "io.element.android.x.debug"
+        BuildType.RELEASE -> applicationId == "com.hyprsphere.chat"
+        BuildType.NIGHTLY -> applicationId == "com.hyprsphere.chat.nightly"
+        BuildType.DEBUG -> applicationId == "com.hyprsphere.chat.debug"
     }
 }

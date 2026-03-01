@@ -18,7 +18,7 @@ import io.element.android.libraries.cryptography.api.SecretKeyRepository
 import kotlinx.coroutines.flow.Flow
 import java.util.concurrent.CopyOnWriteArrayList
 
-private const val SECRET_KEY_ALIAS = "elementx.SECRET_KEY_ALIAS_PIN_CODE"
+private const val SECRET_KEY_ALIAS = "hyprsphere.SECRET_KEY_ALIAS_PIN_CODE"
 
 @ContributesBinding(AppScope::class)
 @SingleIn(AppScope::class)

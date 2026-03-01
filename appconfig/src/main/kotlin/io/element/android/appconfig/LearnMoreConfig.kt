@@ -9,6 +9,7 @@
 package io.element.android.appconfig
 
 object LearnMoreConfig {
+    // TODO: Replace with Hyprsphere help URLs when docs site is live
     const val ENCRYPTION_URL: String = "https://element.io/help#encryption"
     const val DEVICE_VERIFICATION_URL: String = "https://element.io/help#encryption-device-verification"
     const val SECURE_BACKUP_URL: String = "https://element.io/help#encryption5"

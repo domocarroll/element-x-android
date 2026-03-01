@@ -20,7 +20,7 @@ class RustAnalyticsSdkSpan(
 ) : AnalyticsSdkSpan {
     private val inner = if (name != null) {
         Span(
-            target = "elementx",
+            target = "hyprsphere",
             name = name,
             file = "-",
             line = null,
@@ -29,7 +29,7 @@ class RustAnalyticsSdkSpan(
         )
     } else {
         Span.newBridgeSpan(
-            target = "elementx",
+            target = "hyprsphere",
             parentTraceId = parentTraceId,
         )
     }

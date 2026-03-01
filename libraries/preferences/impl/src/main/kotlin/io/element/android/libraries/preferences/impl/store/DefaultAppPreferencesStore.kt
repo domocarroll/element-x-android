@@ -36,7 +36,7 @@ class DefaultAppPreferencesStore(
     private val buildMeta: BuildMeta,
     preferenceDataStoreFactory: PreferenceDataStoreFactory,
 ) : AppPreferencesStore {
-    private val store = preferenceDataStoreFactory.create("elementx_preferences")
+    private val store = preferenceDataStoreFactory.create("hyprsphere_preferences")
 
     override suspend fun setDeveloperModeEnabled(enabled: Boolean) {
         store.edit { prefs ->
